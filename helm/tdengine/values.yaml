@@ -41,7 +41,7 @@ storage:
   #
   className: ""
   dataSize: "100Gi"
-  logSize: "10Gi"
+  logSize: "20Gi"
 
 nodeSelectors:
   taosd:
