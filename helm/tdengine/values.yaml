@@ -67,7 +67,7 @@ taoscfg:
   # Starts as cluster or not, must be 0 or 1.
   #   0: all pods will start as a seperate TDengine server
   #   1: pods will start as TDengine server cluster. [default]
-  CLUSTER: "1"
+  CLUSTER: "0"
 
   # number of replications, for cluster only
   TAOS_REPLICA: "1"
@@ -75,11 +75,11 @@ taoscfg:
   # number of management nodes in the system
   TAOS_NUM_OF_MNODES: "1"
 
-  # number of days per DB file
-  # TAOS_DAYS: "10"
+  # number of days per DB file（每个数据文件存储数据的时间跨度，单位为天，默认值：10。）
+  TAOS_DAYS: "10"
 
-  # number of days to keep DB file, default is 10 years.
-  #TAOS_KEEP: "3650"
+  # number of days to keep DB file, default is 10 years. （数据库中数据保留的天数，单位为天，默认值：3650）
+  TAOS_KEEP: "180"
 
   # cache block size (Mbyte)
   #TAOS_CACHE: "16"
@@ -87,10 +87,10 @@ taoscfg:
   # number of cache blocks per vnode
   #TAOS_BLOCKS: "6"
 
-  # minimum rows of records in file block
+  # minimum rows of records in file block（文件块中记录的最小条数，单位为条，默认值：100。）
   #TAOS_MIN_ROWS: "100"
 
-  # maximum rows of records in file block
+  # maximum rows of records in file block（文件块中记录的最大条数，单位为条，默认值：4096）
   #TAOS_MAX_ROWS: "4096"
 
   #
@@ -187,7 +187,7 @@ taoscfg:
   # > 0 (rpc message body which larger than this value will be compressed)
   #TAOS_COMPRESS_MSG_SIZE: "-1"
 
-  # max length of an SQL
+  # max length of an SQL（单条SQL语句允许最长限制。默认值：65380字节）
   #TAOS_MAX_SQL_LENGTH: "1048576"
 
   # the maximum number of records allowed for super table time sorting
