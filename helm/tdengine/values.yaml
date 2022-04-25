@@ -40,8 +40,8 @@ storage:
   # Set storageClassName for pvc. K8s use default storage class if not set.
   #
   className: ""
-  dataSize: "40Gi"
-  logSize: "20Gi"
+  dataSize: "100Gi"
+  logSize: "10Gi"
 
 nodeSelectors:
   taosd:
